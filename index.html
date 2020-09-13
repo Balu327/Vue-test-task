@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<title>DOCument</title>
+	
+	<style type="text/css">
+		.block{
+			height: 250px;
+			width: 300px;
+			margin-left: 30%;
+			margin-top: 10%;
+		}
+		
+	</style>
+</head>
+<body>
+	<h2>Text editor</h2>
+	<h5>Test task</h5>
+<br>
+	
+     
+   
+	<div class="block">
+  <div id="app">
+
+	
+<div class="container">
+	 
+	  <input type="text"  v-model="firsttext">
+	        <button @click="editing" class="btn btn-primary">edit</button>
+	         <h1  v-bind:style="styles" v-model="firsttext">{{ edit }}</h1>
+	 
+
+	  <blog-post  v-for="post in posts" :post="post" :key="post.id"></blog-post>
+
+	 <ul>
+		<li><input type="text" v-model="fontColor"></li>
+		<li><input type="text" v-model="backgroundColor"></li>
+	 </ul>
+      
+ 
+	
+	</div>
+  </div>
+</div>
+
+
+
+
+ <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+ <script src="script.js"></script>
+ <script src="style.css"></script>
+ </body>
+</html>
